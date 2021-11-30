@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/tan_light">
+
+    <Button
+        android:id="@+id/intro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/main_green"
+
+        android:enabled="false"
+        android:text="STUDY NOOK"
+        android:textColor="@color/white"
+
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/introTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/introTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        android:text="the community-driven destination for your new favorite study spot"
+        android:textAlignment="center"
+        android:textColor="@color/accent_dark_green"
+        android:textStyle="italic"
+
+        app:layout_constraintEnd_toEndOf="@+id/intro"
+        app:layout_constraintStart_toStartOf="@+id/intro"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:id="@+id/username"
+
+        android:layout_margin="50dp"
+
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/tan_dark"
+        android:hint="username"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/introTag" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/tan_dark"
+        android:hint="password"
+
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/username"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password"/>
+
+    <TextView
+        android:id="@+id/askToJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="WANT TO JOIN THE COMMUNITY?"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:textSize="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/createAccount"/>
+    <Button
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="40dp"
+        android:text="create an account"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+
+        app:layout_constraintStart_toStartOf="@id/askToJoin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/askToJoin"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

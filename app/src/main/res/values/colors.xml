@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tan_light">#FDF8F4</color>
+    <color name="tan_dark">#FBF5F0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name ="main_green">#BACBA9</color>
+    <color name ="accent_dark_green">#3F4739</color>
+    <color name ="teal_200">#aaaaaa</color>
+    <color name ="purple_200">#bbbbbb</color>
+    <color name ="purple_700">#cccccc</color>
+
+</resources>

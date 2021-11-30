@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_light"
+    >
+
+    <TextView
+        android:id="@+id/studyNook"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+
+        android:text="study nook"
+        android:textAllCaps="true"
+        android:textSize="50dp"
+        android:textAlignment="center"
+
+        android:background="@color/main_green"
+        android:textColor="@color/tan_light"
+
+        app:layout_constraintEnd_toEndOf="@id/welcomeBanner"
+        app:layout_constraintStart_toStartOf="@id/welcomeBanner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/welcomeBanner"/>
+
+    <TextView
+        android:id="@+id/welcomeBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/main_green"
+        android:text="we're glad you're here"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/tan_light"
+        android:textSize="23dp"
+
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/tagLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studyNook" />
+
+    <TextView
+        android:id="@+id/tagLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="fill out the information below to get started"
+        android:textAlignment="center"
+        android:textColor="@color/accent_dark_green"
+        android:textSize="18dp"
+
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/child"
+        app:layout_constraintEnd_toEndOf="@id/welcomeBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeBanner" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/child"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+
+        android:background="@color/tan_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagLine">
+
+        <EditText
+            android:id="@+id/usernameInp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:hint="username"
+            app:layout_constraintBottom_toTopOf="@id/passwordInp"
+            app:layout_constraintEnd_toEndOf="@id/child"
+            app:layout_constraintStart_toStartOf="@id/child"
+
+            app:layout_constraintTop_toTopOf="@id/child" />
+
+        <EditText
+            android:id="@+id/passwordInp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:hint="password"
+            android:inputType="textPassword|numberPassword"
+            app:layout_constraintEnd_toEndOf="@+id/usernameInp"
+            app:layout_constraintStart_toStartOf="@+id/usernameInp"
+            app:layout_constraintTop_toBottomOf="@id/usernameInp"
+            app:layout_constraintBottom_toTopOf="@id/passwordConf"/>
+
+        <EditText
+            android:id="@+id/passwordConf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:hint="confirm password"
+            android:inputType="textPassword|numberPassword"
+            app:layout_constraintEnd_toEndOf="@+id/usernameInp"
+            app:layout_constraintStart_toStartOf="@+id/usernameInp"
+            app:layout_constraintTop_toBottomOf="@id/passwordInp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
