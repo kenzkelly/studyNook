@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     UserOpenHelper helper;
     FirebaseDatabase firebase;
     DatabaseReference dbr;
+        DatabaseReference userDB;
 
     ActivityResultLauncher<Intent> launcher;
 
@@ -52,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.sn_entrance);
 
         FirebaseApp.initializeApp(this);
-        firebase = FirebaseDatabase.getInstance("https://studynook-897b0-default-rtdb.firebaseio.com/");
+        firebase = FirebaseDatabase.getInstance();
         dbr = firebase.getReference();
+        userDB = dbr.child("users");
 
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>(){
@@ -65,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                         String usernameStr = r.getData().getStringExtra("username").toString();
                         String passwordStr = r.getData().getStringExtra("password").toString();
                         User user = new User(usernameStr, passwordStr);
-                        addToDatabase(user);
+                        DatabaseReference newUserDB = userDB.push();
+                        newUserDB.setValue(user);
                     }
                 });
         log_in = findViewById(R.id.logIn);
@@ -112,18 +115,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void addToDatabase(User user)
-    {
-        dbr.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dbr.setValue(user);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 }

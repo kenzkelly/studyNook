@@ -47,6 +47,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                 else{
                     if(passwordStr.length() < 5)
                         requirementsFailed();
+                    if(!confirm_password.getText().toString().equals(passwordStr))
+                        requirementsFailed();
                     else{
                         User user = new User(usernameStr, passwordStr);
                         Intent intent = new Intent();
@@ -77,6 +79,12 @@ public class CreateAccountActivity extends AppCompatActivity {
         if(checkPassword(passwordStr))
         {
             Toast toast = Toast.makeText(CreateAccountActivity.this, "you need at least 5 characters in your password", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+        if(!confirm_password.getText().toString().equals(passwordStr))
+        {
+            Toast toast = Toast.makeText(CreateAccountActivity.this, "your password confirmation doesn't match", Toast.LENGTH_LONG);
             toast.show();
         }
     }
