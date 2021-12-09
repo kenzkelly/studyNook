@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076842967000",
+    "project_id": "studynook-32719",
+    "storage_bucket": "studynook-32719.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076842967000:android:79a31f06d7c374da38ccad",
+        "android_client_info": {
+          "package_name": "com.example.studynook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076842967000-27imcmgqg5tfu4vgdn39inkk5psj0cvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3cfVn2XQg10zeeqQqcE2EWCoHmlaYk04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076842967000-27imcmgqg5tfu4vgdn39inkk5psj0cvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
